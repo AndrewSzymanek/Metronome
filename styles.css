@@ -17,7 +17,6 @@ body {
 }
 
 .metronome {
-  border: 1px solid #000;
   display: flex;
   flex-direction: column;
   width: 300px;
@@ -66,4 +65,72 @@ body {
 }
 .tempo-settings .decrease-tempo {
   line-height: 25px;
+}
+
+/* replace below with current CSS usages */
+input[type="range"] {
+  -webkit-appearance: none;
+  background-color: transparent;
+  width: 70%;
+}
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+}
+input[type="range"]:focus {
+  outline: none;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #fa54ac;
+  margin-top: -8px;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 1px;
+  background: #ddd;
+}
+
+.start-stop {
+  width: 50px;
+  height: 50px;
+  font-size: 0.7em;
+  text-align: center;
+  background: #fa54ac;
+  border-radius: 50%;
+  color: #fff;
+  line-height: 50px;
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+.start-stop:hover {
+  background: #ff656c;
+}
+
+.measures {
+  display: flex;
+  justify-content: center;
+}
+
+.measures .stepper {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid #ddd;
+  text-align: center;
+  margin: 0 5px;
+  cursor: pointer;
+}
+.measures .stepper:hover {
+  background: #ff656c;
+  color: #fff;
+}
+
+.measures .add-beats {
+  line-height: 20px;
 }
